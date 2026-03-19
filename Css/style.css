@@ -1,0 +1,332 @@
+/* Global styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+:root {
+  --dark-grey: #1b1b32;
+  --black: #000;
+  --white: #fff;
+  --golden-yellow: #fecc4c;
+  --yellow: #ffcc4c;
+  --gold: #feac32;
+  --orange: #ffac33;
+  --dark-orange: #f89808;
+}
+
+body {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+
+.title {
+  width: 100%;
+  height: 120px;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 40px;
+  font-family:
+    irish grover,
+    cursive;
+  letter-spacing: 10%;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family:
+    irish grover,
+    cursive;
+  font-size: 20px;
+  letter-spacing: 10%;
+  padding: 20px 2%;
+}
+.small-title {
+  background:
+    linear-gradient(to bottom right, #440155 0%, #790a94 25%, #000 50%) bottom
+      right / 50% 50% no-repeat,
+    linear-gradient(to bottom left, #440155 0%, #790a94 25%, #000 50%) bottom
+      left / 50% 50% no-repeat,
+    linear-gradient(to top left, #440155 0%, #790a94 25%, #000 50%) top left /
+      50% 50% no-repeat,
+    linear-gradient(to top right, #440155 0%, #790a94 25%, #000 50%) top right /
+      50% 50% no-repeat;
+}
+.links a {
+  margin-left: 25px;
+}
+
+/* Home page styles */
+.cards-container {
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 70px;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.card {
+  width: 300px;
+  height: 190px;
+  padding: 13px 12px;
+  background-color: var(--golden-yellow);
+  border: 3px solid var(--dark-orange);
+  border-radius: 5px 5px 10px 10px;
+  color: var(--black);
+  line-height: auto;
+}
+
+.card h2 {
+  font-family:
+    irish grover,
+    cursive;
+  font-size: 23px;
+  letter-spacing: 10%;
+}
+.card p {
+  font-family: itim, cursive;
+  font-size: 15px;
+}
+.card .btn {
+  width: 100px;
+  height: 25px;
+  border-radius: 20px;
+  border: 1px solid var(--black);
+  cursor: pointer;
+  background-color: var(--dark-orange);
+  font-family:
+    irish grover,
+    cursive;
+  font-size: 15px;
+  display: block; /* will center the button horizontally */
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.card .btn:hover {
+  background-image: linear-gradient(
+    to right,
+    var(--dark-orange),
+    var(--yellow)
+  );
+  color: var(--dark-grey);
+  border: 1px solid var(--dark-grey);
+}
+
+/*universal styles for other pages*/
+.sub-title {
+  width: 100%;
+  height: 90px;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub-title h1 {
+  font-size: 30px;
+  font-family:
+    irish grover,
+    cursive;
+  letter-spacing: 10%;
+}
+
+/* Description page styles */
+.upper {
+  display: flex;
+  width: 1000px;
+  margin: 50px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  background-color: var(--black);
+}
+.story-info {
+  width: 500px;
+  height: 250px;
+  font-family:
+    irish grover,
+    cursive;
+  font-size: 25px;
+  color: var(--yellow);
+  letter-spacing: 10%;
+  padding-top: 20px;
+}
+.story-info p {
+  font-family: itim, cursive;
+  font-size: 20px;
+}
+.story-info .btn {
+  width: 160px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--black);
+  background-color: var(--dark-orange);
+  font-family:
+    irish grover,
+    cursive;
+  font-size: 20px;
+  position: relative;
+  top: 70px;
+}
+.story-info .btn:hover {
+  background-image: linear-gradient(
+    to right,
+    var(--dark-orange),
+    var(--yellow)
+  );
+  color: var(--dark-grey);
+  border: 1px solid var(--dark-grey);
+}
+
+.description {
+  display: flex;
+  width: 1000px;
+  margin: 50px auto;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  background-color: var(--black);
+  border-radius: 10px;
+  padding: 30px 50px;
+}
+.description-title {
+  font-family:
+    irish grover,
+    cursive;
+  font-size: 30px;
+  color: var(--yellow);
+  letter-spacing: 10%;
+}
+.story-description {
+  font-family: itim, cursive;
+  font-size: 20px;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+/*Reading page styles*/
+.breadcrumb {
+  width: 100%;
+  height: 50px;
+  align-items: left;
+  font-family:
+    irish grover,
+    cursive;
+  font-size: 20px;
+  letter-spacing: 10%;
+  padding: 20px 100px;
+}
+.breadcrumb a {
+  color: var(--yellow);
+}
+
+.story-content {
+  width: 800px;
+  border-radius: 10px;
+  background: var(--black, #000);
+  padding: 50px;
+  margin: 20px auto;
+}
+.story-content h2 {
+  font-family:
+    irish grover,
+    cursive;
+  font-size: 30px;
+  letter-spacing: 10%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.story-content p {
+  font-family: lora, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.navigation {
+  width: 100%;
+  display: inline-flex;
+  padding: 0 162px 0 162px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 347px;
+  margin-bottom: 30px;
+}
+.navigation button,
+.navigation p {
+  color: var(--white);
+  font-family: "Irish Grover";
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.navigation p {
+  color: var(--yellow);
+}
+#page-number {
+  color: var(--white);
+}
+
+/*about page styles*/
+.author {
+  width: 100%;
+  font-family:
+    irish grover,
+    cursive;
+  font-size: 30px;
+  color: var(--yellow);
+  letter-spacing: 10%;
+  text-align: center;
+  margin: 10px auto 30px auto;
+}
+
+.about-content {
+  width: 800px;
+  border-radius: 10px;
+  background: var(--black, #000);
+  padding: 30px;
+  margin: 30px auto;
+}
+.about-content p {
+  font-family: itim, cursive;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 5%;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.gmail {
+  color: var(--yellow);
+}
