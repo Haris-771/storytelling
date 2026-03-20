@@ -341,8 +341,9 @@ img {
     padding-left: 0;
   }
   .card {
-    width: 90%;
-    height: 250px;
+    width: 85%;
+    height: 230px;
+    border-radius: 8%;
   }
 
   .upper {
