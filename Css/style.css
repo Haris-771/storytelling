@@ -188,8 +188,8 @@ img {
   font-size: 1.1rem;
 }
 .story-info .btn {
-  width: clamp(100px, 15vw, 160px);
-  height: clamp(20px, 3vw, 40px);
+  width: clamp(120px, 15vw, 160px);
+  height: clamp(35px, 3vw, 40px);
   border-radius: 20px;
   border: 1px solid var(--black);
   background-color: var(--dark-orange);
@@ -226,7 +226,7 @@ img {
   font-family:
     irish grover,
     cursive;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: var(--yellow);
   letter-spacing: 10%;
 }
