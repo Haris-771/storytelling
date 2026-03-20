@@ -37,14 +37,14 @@ body {
 
 .title {
   width: 100%;
-  height: 120px;
+  height: clamp(80px, 10vw, 120px);
   background-color: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 h1 {
-  font-size: 40px;
+  font-size: clamp(25px, 2.8vw, 40px);
   font-family:
     irish grover,
     cursive;
@@ -61,7 +61,7 @@ footer {
   font-family:
     irish grover,
     cursive;
-  font-size: 20px;
+  font-size: clamp(15px, 2vw, 20px);
   letter-spacing: 10%;
   padding: 20px 2%;
 }
@@ -83,41 +83,39 @@ footer {
 /* Home page styles */
 .cards-container {
   max-width: 1200px;
-  margin: 35px auto;
+  margin: 40px auto;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   row-gap: 70px;
-  column-gap: 10px;
   justify-content: center;
   align-items: center;
   justify-items: center;
 }
 .card {
-  width: 300px;
-  height: 190px;
+  width: 65%;
+  height: clamp(200px, 20vw, 230px);
   padding: 13px 12px;
   background-color: var(--golden-yellow);
   border: 3px solid var(--dark-orange);
   border-radius: 5px 5px 10px 10px;
   color: var(--black);
   line-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card h2 {
   font-family:
     irish grover,
     cursive;
-  font-size: 23px;
+  font-size: clamp(15px, 2vw, 20px);
   letter-spacing: 10%;
 }
-.card p {
-  font-family: itim, cursive;
-  font-size: 15px;
-}
 .card .btn {
-  width: 100px;
-  height: 25px;
+  width: clamp(70px, 15vw, 100px);
+  height: clamp(13px, 1.5vw, 20px);
   border-radius: 20px;
   border: 1px solid var(--black);
   cursor: pointer;
@@ -125,10 +123,9 @@ footer {
   font-family:
     irish grover,
     cursive;
-  font-size: 15px;
+  font-size: clamp(10px, 1.5vw, 15px);
   display: block; /* will center the button horizontally */
-  margin: 0 auto;
-  margin-top: 15px;
+  margin: 0 auto; 
 }
 .card .btn:hover {
   background-image: linear-gradient(
@@ -143,14 +140,14 @@ footer {
 /*universal styles for other pages*/
 .sub-title {
   width: 100%;
-  height: 90px;
+  height: clamp(70px, 10vw, 90px);
   background-color: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .sub-title h1 {
-  font-size: 30px;
+  font-size: clamp(25px, 2.5vw, 30px);
   font-family:
     irish grover,
     cursive;
@@ -158,18 +155,22 @@ footer {
 }
 
 /* Description page styles */
-.upper {
-  display: flex;
-  width: 1000px;
-  margin: 50px auto;
-  justify-content: space-between;
-  align-items: center;
-}
+    .upper {
+      display: flex;
+      width: 90%;
+      max-width: 1000px;
+      margin: 50px auto;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 img {
-  width: 250px;
-  height: 250px;
+  width: clamp(150px, 35vw, 400px);
+  height: clamp(200px, 25vw, 250px);
   border-radius: 10px;
   background-color: var(--black);
+  object-fit: cover;
 }
 .story-info {
   width: 500px;
@@ -177,27 +178,27 @@ img {
   font-family:
     irish grover,
     cursive;
-  font-size: 25px;
+  font-size: 1.2rem;
   color: var(--yellow);
   letter-spacing: 10%;
   padding-top: 20px;
 }
 .story-info p {
   font-family: itim, cursive;
-  font-size: 20px;
+  font-size: 1.1rem;
 }
 .story-info .btn {
-  width: 160px;
-  height: 40px;
+  width: clamp(100px, 15vw, 160px);
+  height: clamp(20px, 3vw, 40px);
   border-radius: 20px;
   border: 1px solid var(--black);
   background-color: var(--dark-orange);
   font-family:
     irish grover,
     cursive;
-  font-size: 20px;
+  font-size: clamp(15px, 2vw, 20px);
   position: relative;
-  top: 70px;
+  top: 30px;
 }
 .story-info .btn:hover {
   background-image: linear-gradient(
@@ -211,7 +212,8 @@ img {
 
 .description {
   display: flex;
-  width: 1000px;
+  width: 95%;
+  max-width: 1000px;
   margin: 50px auto;
   flex-direction: column;
   gap: 30px;
@@ -224,13 +226,13 @@ img {
   font-family:
     irish grover,
     cursive;
-  font-size: 30px;
+  font-size: 1.7rem;
   color: var(--yellow);
   letter-spacing: 10%;
 }
 .story-description {
   font-family: itim, cursive;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: var(--white);
   line-height: 1.5;
 }
@@ -329,4 +331,37 @@ img {
 
 .gmail {
   color: var(--yellow);
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .card {
+    width: 80%;
+    height: 220px;
+  }
+
+  .upper {
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .story-info {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  
+  .description {
+    margin-top: 70px;
+    padding: 20px 30px;
+  }
 }
