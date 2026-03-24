@@ -37,14 +37,14 @@ body {
 
 .title {
   width: 100%;
-  height: clamp(80px, 10vw, 120px);
+  height: clamp(90px, 10vw, 120px);
   background-color: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 h1 {
-  font-size: clamp(25px, 2.8vw, 40px);
+  font-size: clamp(22px, 2.8vw, 40px);
   font-family:
     irish grover,
     cursive;
@@ -53,11 +53,11 @@ h1 {
 
 footer {
   width: 100%;
-  height: 50px;
+  height: 70px;
   background-color: var(--black);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   font-family:
     irish grover,
     cursive;
@@ -95,10 +95,10 @@ footer {
 .card {
   width: 65%;
   height: clamp(200px, 20vw, 230px);
-  padding: 13px 12px;
+  padding: 15px 15px;
   background-color: var(--golden-yellow);
   border: 3px solid var(--dark-orange);
-  border-radius: 5px 5px 10px 10px;
+  border-radius: 50px 10px 50px 10px;
   color: var(--black);
   line-height: auto;
   display: flex;
@@ -125,7 +125,7 @@ footer {
     cursive;
   font-size: clamp(10px, 1.5vw, 15px);
   display: block; /* will center the button horizontally */
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 .card .btn:hover {
   background-image: linear-gradient(
@@ -140,31 +140,30 @@ footer {
 /*universal styles for other pages*/
 .sub-title {
   width: 100%;
-  height: clamp(70px, 10vw, 90px);
+  height: clamp(90px, 10vw, 100px);
   background-color: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .sub-title h1 {
-  font-size: clamp(25px, 2.5vw, 30px);
+  font-size: clamp(20px, 2.5vw, 30px);
   font-family:
     irish grover,
     cursive;
-  letter-spacing: 10%;
 }
 
 /* Description page styles */
-    .upper {
-      display: flex;
-      width: 90%;
-      max-width: 1000px;
-      margin: 50px auto;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+.upper {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 img {
   width: clamp(150px, 35vw, 400px);
   height: clamp(200px, 25vw, 250px);
@@ -226,13 +225,13 @@ img {
   font-family:
     irish grover,
     cursive;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--yellow);
   letter-spacing: 10%;
 }
 .story-description {
   font-family: itim, cursive;
-  font-size: 1.2rem;
+  font-size: clamp(16px, 2vw, 20px);
   color: var(--white);
   line-height: 1.5;
 }
@@ -260,19 +259,10 @@ img {
   padding: 50px;
   margin: 20px auto;
 }
-.story-content h2 {
-  font-family:
-    irish grover,
-    cursive;
-  font-size: 30px;
-  letter-spacing: 10%;
-  margin-bottom: 30px;
-  text-align: center;
-}
 .story-content p {
   font-family: lora, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: clamp(16px, 1.5vw, 18px);
+  line-height: 1.5;
   margin-bottom: 20px;
   color: var(--white);
 }
@@ -280,17 +270,18 @@ img {
 .navigation {
   width: 100%;
   display: inline-flex;
-  padding: 0 162px 0 162px;
+  padding: 0 clamp(15px, 10%, 162px);
   justify-content: center;
   align-items: flex-start;
-  gap: 347px;
+  gap: clamp(30px, 20vw, 340px);
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 .navigation button,
 .navigation p {
   color: var(--white);
   font-family: "Irish Grover";
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   letter-spacing: 2px;
 }
 .navigation p {
@@ -306,7 +297,7 @@ img {
   font-family:
     irish grover,
     cursive;
-  font-size: 30px;
+  font-size: clamp(20px, 2.5vw, 30px);
   color: var(--yellow);
   letter-spacing: 10%;
   text-align: center;
@@ -322,7 +313,7 @@ img {
 }
 .about-content p {
   font-family: itim, cursive;
-  font-size: 20px;
+  font-size: clamp(16px, 1.8vw, 18px);
   line-height: 1.6;
   letter-spacing: 5%;
   margin-bottom: 20px;
@@ -343,7 +334,6 @@ img {
   .card {
     width: 85%;
     height: 230px;
-    border-radius: 8%;
   }
 
   .upper {
@@ -360,9 +350,23 @@ img {
     height: auto;
     text-align: center;
   }
-  
   .description {
     margin-top: 70px;
     padding: 20px 30px;
+  }
+
+  .breadcrumb {
+    padding: 20px;
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  .story-content {
+    width: 95%;
+    padding: 25px 15px;
+  }
+
+  .about-content {
+    width: 95%;
+    padding: 20px 15px;
   }
 }
