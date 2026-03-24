@@ -1,4 +1,4 @@
-const words_per_page = 300;
+const words_per_page = 500;
 let pages = [];
 let currentPage = 1;
 let totalPages = 1;
