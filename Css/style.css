@@ -21,6 +21,7 @@ a {
 
 :root {
   --dark-grey: #1b1b32;
+  --light-grey: #2d2d44;
   --black: #000;
   --white: #fff;
   --golden-yellow: #fecc4c;
@@ -135,19 +136,17 @@ footer {
   gap: 20px;
 }
 .cover-image {
-  width: clamp(150px, 25vw, 285px);
-  height: clamp(200px, 35vw, 400px);
-  border-radius: 10px;
-  background-color: var(--black);
+  width: clamp(200px, 25vw, 285px);
+  height: clamp(275px, 35vw, 400px);
+  background-color: var(--light-grey);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .cover-image img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
-  border-radius: 10px;
 }
 .story-info {
   width: 500px;
