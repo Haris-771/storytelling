@@ -3,49 +3,49 @@
         "id": "city-of-sin",
         "title": "The City of Sin",
         "description": "A dark tale set in a corrupt urban environment.",
-        "coverImage": "covers/city-of-sin.jpg",
+        "coverImage": "covers/city-of-sin.png",
         "content": "stories/city-of-sin.txt"
     },
     {
         "id": "ancient-library",
         "title": "The Ancient Library",
         "description": "The story of a courageous rabbit who overcomes great odds.",
-        "coverImage": "covers/ancient-library.jpg",
+        "coverImage": "covers/ancient-library.png",
         "content": "stories/ancient-library.txt"
     },
     {
         "id": "drive-me-home-tonight",
         "title": "Drive Me Home Tonight",
         "description": "A heartwarming story about friendship and the journey home.",
-        "coverImage": "covers/drive-me-home-tonight.jpg",
+        "coverImage": "covers/drive-me-home-tonight.png",
         "content": "stories/drive-me-home-tonight.txt"
     },
     {
         "id": "copy-of-horror",
         "title": "The Copy of Horror",
         "description": "A chilling tale of a haunted library.",
-        "coverImage": "covers/copy-of-horror.jpg",
+        "coverImage": "covers/copy-of-horror.png",
         "content": "stories/copy-of-horror.txt"
     },
     {
         "id": "dreams-between-halfclosed-eyelids",
         "title": "Dreams Between Half-Closed Eyelids",
         "description": "A surreal tale of dreams and reality.",
-        "coverImage": "covers/dreams-between-halfclosed-eyelids.jpg",
+        "coverImage": "covers/dreams-between-halfclosed-eyelids.png",
         "content": "stories/dreams-between-halfclosed-eyelids.txt"
     },
     {
         "id": "the-bride-and-her-green-friend",
         "title": "The Bride and Her Green Friend",
         "description": "A whimsical tale of an unusual friendship.",
-        "coverImage": "covers/the-bride-and-her-green-friend.jpg",
+        "coverImage": "covers/the-bride-and-her-green-friend.png",
         "content": "stories/the-bride-and-her-green-friend.txt"
     },
     {
         "id": "kaoru-from-the-ancient-folklore",
         "title": "Kaoru from the Ancient Folklore",
         "description": "A mystical tale of an ancient legend.",
-        "coverImage": "covers/enchanted-forest.jpg",
+        "coverImage": "covers/kaoru-from-ancient-folklore.png",
         "content": "stories/kaoru-from-ancient-folklore.txt"
     },
     {
