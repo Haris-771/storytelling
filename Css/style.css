@@ -7,6 +7,18 @@
   box-sizing: border-box;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 button {
   background: none;
   border: none;
@@ -32,7 +44,13 @@ a {
 }
 
 body {
-  background-color: var(--dark-grey);
+  background: var(--dark-grey);
+  background-image: url("/covers/background.png");
+  background-size: cover;        
+  background-position: center;  
+  background-repeat: no-repeat; 
+  height: 100vh;        
+  background-attachment: fixed;         
   color: var(--white);
 }
 
@@ -88,24 +106,29 @@ footer {
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 70px;
   justify-content: center;
   align-items: center;
   justify-items: center;
 }
 .card {
   width: 65%;
-  height: 250px;
+  height: clamp(250px, 30vw, 350px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: clamp(10px, 3vw, 30px);
+  margin-bottom: 10px;
+  overflow: hidden;
 }
+
 .home-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+.card:hover img{
+  transform: scale(1.1);
 }
 
 /*universal styles for other pages*/
@@ -175,15 +198,13 @@ footer {
   font-size: clamp(15px, 2vw, 20px);
   position: relative;
   top: 30px;
+  transition: all ease 0.4s;
 }
 .story-info .btn:hover {
-  background-image: linear-gradient(
-    to right,
-    var(--dark-orange),
-    var(--yellow)
-  );
-  color: var(--dark-grey);
-  border: 1px solid var(--dark-grey);
+  background: var(--black);
+  transform: scale(1.05);
+  color: var(--yellow);
+  border: 1px solid var(--light-grey);
 }
 
 .description {
@@ -230,7 +251,8 @@ footer {
 }
 
 .story-content {
-  width: 800px;
+  max-width: 800px;
+  width: 90%;
   border-radius: 10px;
   background: var(--black, #000);
   padding: 50px;
@@ -261,12 +283,17 @@ footer {
   font-size: clamp(16px, 2vw, 20px);
   letter-spacing: 2px;
 }
+#prev-btn:hover,
+#next-btn:hover {
+  color: var(--yellow);
+}
 .navigation p {
   color: var(--yellow);
 }
 #page-number {
   color: var(--white);
 }
+
 
 /*about page styles*/
 .author {
@@ -282,7 +309,8 @@ footer {
 }
 
 .about-content {
-  width: 800px;
+  max-width: 800px;
+  width: 90%;
   border-radius: 10px;
   background: var(--black, #000);
   padding: 30px;
@@ -342,5 +370,19 @@ footer {
   .about-content {
     width: 95%;
     padding: 20px 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: 85%;
+    height: 180px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 85%;
+    height: 240px;
   }
 }
