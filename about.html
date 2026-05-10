@@ -12,13 +12,37 @@
       href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Itim&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
   </head>
 
   <body>
     <div class="sub-title">
+      <div class="left-area"></div>
+
       <a href="index.html">
         <h1>Ruku's StoryBooks</h1>
       </a>
+
+      <div class="right-area"><div class="dropdown">
+        <button
+          id="themeBtn"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="themeMenu"
+        >
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <ul id="themeMenu" class="menu" role="menu" hidden>
+          <li role="menuitem" tabindex="0" data-theme="light">Light</li>
+          <li role="menuitem" tabindex="0" data-theme="dark">Dark</li>
+        </ul>
+      </div></div>
     </div>
 
     <nav class="breadcrumb"><a href="index.html">Home</a> /</nav>
@@ -50,7 +74,7 @@
         <a href="mailto:zararukayyah@gmail.com">Contact Us</a>
       </div>
     </footer>
-
+    
     <script src="Js/script.js"></script>
   </body>
 </html>
