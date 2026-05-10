@@ -24,11 +24,6 @@ items.forEach(item => {
         document.documentElement.dataset.theme = theme;
         localStorage.setItem("theme", theme);
 
-        if(theme === "light") {
-            document.body.style.backgroundImage = "url('/covers/bg-light.png')";
-        }
-        else {            document.body.style.backgroundImage = "url('/covers/background.png')";
-        }
         closeMenu();
     });
 
@@ -60,9 +55,3 @@ const saved =
     localStorage.getItem("theme") || "light";
 
 document.documentElement.dataset.theme = saved;
-
-if(saved === "light") {
-    document.body.style.backgroundImage = "url('/covers/bg-light.png')";
-} else {
-    document.body.style.backgroundImage = "url('/covers/background.png')";
-}

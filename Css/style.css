@@ -49,6 +49,14 @@ a {
   --accent: #f79708;
 }
 
+[data-theme="light"] body {
+  background-image: url('/covers/bg-light.png');
+}
+
+[data-theme="dark"] body {
+  background-image: url('/covers/background.png');
+}
+
 body {
   background: var(--bg);
   background-image: url("/covers/background.png");
